@@ -13,18 +13,19 @@ TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := krait
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
-TARGET_BOOTLOADER_BOARD_NAME := zee
+#TARGET_BOOTLOADER_BOARD_NAME := 
 TARGET_BOARD_PLATFORM := msm8974
 
-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=z user_debug=31 msm_rtb.filter=0x0
-BOARD_KERNEL_BASE := 0x80000000
+# Kernel information
+BOARD_KERNEL_BASE     := 0x80008000
+BOARD_KERNEL_CMDLINE  := console=ttyHSL0,115200,n8 androidboot.hardware=z user_debug=31 msm_rtb.filter=0x0
+BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0xfea08200 --tags_offset 0x80008100
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x00800100 --tags_offset 0x04800000
 BOARD_KERNEL_SEPARATED_DT := true
 
-BOARD_CUSTOM_BOOTIMG_MK := device/lge/g2-common/releasetools/mkbootimg.mk
+#BOARD_CUSTOM_BOOTIMG_MK := device/lge/zee/mkbootimg.mk
 TARGET_KERNEL_SOURCE := kernel/lge/msm8974
-TARGET_KERNEL_CONFIG := cyanogenmod_d802_defconfig
+TARGET_KERNEL_CONFIG := z-kt-perf_defconfig
 
 BOARD_BOOTIMAGE_PARTITION_SIZE := 11534336
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 13631488
