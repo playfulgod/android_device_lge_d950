@@ -1,4 +1,4 @@
-import init.g2.usb.rc
+import init.zee.usb.rc
 
 on early-init
     mount debugfs debugfs /sys/kernel/debug
@@ -39,7 +39,7 @@ on init
     mkdir /sns/cal 0771 system system
 
 on fs
-    mount_all ./fstab.g2
+    mount_all ./fstab.zee
     write /sys/kernel/boot_adsp/boot 1
     setprop ro.crypto.fuse_sdcard true
 
@@ -136,7 +136,7 @@ on boot
     chown system system /sys/class/leds/red/brightness
     chown system system /sys/class/leds/green/brightness
     chown system system /sys/class/leds/blue/brightness
-    chown system system /sys/class/g2_rgb_led/use_patterns/blink_patterns
+    chown system system /sys/class/zee_rgb_led/use_patterns/blink_patterns
     chown system system /sys/class/leds/button-backlight1/brightness
     chown system system /sys/class/leds/button-backlight2/brightness
 
