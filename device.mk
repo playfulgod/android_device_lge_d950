@@ -14,40 +14,21 @@
 # limitations under the License.
 #
 
-# The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
-
-$(call inherit-product-if-exists, vendor/lge/zee/zee-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/d802/d802-vendor.mk)
+$(call inherit-product, device/lge/g2-common/g2.mk)
 
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-LOCAL_PATH := device/lge/zee
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
-else
-	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	telephony.lteOnGsmDevice=1 \
+	ro.telephony.default_network=9
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel 
+	frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml
 
-# This device is xhdpi.  However the platform doesn't
-# currently contain all of the bitmaps at xhdpi density so
-# we do this little trick to fall back to the hdpi version
-# if the xhdpi doesn't exist.
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi xxhdpi
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
-
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init.zee.rc:root/init.zee.rc \
-    $(LOCAL_PATH)/init.zee.usb.rc:root/init.zee.usb.rc \
-    $(LOCAL_PATH)/ueventd.zee.rc:root/ueventd.zee.rc \
-    $(LOCAL_PATH)/fstab.zee:root/fstab.zee
-
+# NFC packages
 PRODUCT_PACKAGES += \
-    charger_res_images \
-    charger
-
-
+    nfc_nci.g2 \
+    NfcNci
