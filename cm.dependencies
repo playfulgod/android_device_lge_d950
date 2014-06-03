@@ -1,7 +1,7 @@
 [
  {
-   "repository": "android_device_lge_g2-common",
-   "target_path": "device/lge/g2-common"
+   "repository": "android_device_lge_z-common",
+   "target_path": "device/lge/z-common"
  },
  {
    "repository": "android_kernel_lge_msm8974",

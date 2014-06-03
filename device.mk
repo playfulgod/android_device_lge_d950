@@ -14,8 +14,8 @@
 # limitations under the License.
 #
 
-$(call inherit-product-if-exists, vendor/lge/d802/d802-vendor.mk)
-$(call inherit-product, device/lge/g2-common/g2.mk)
+$(call inherit-product-if-exists, vendor/lge/d959/d959-vendor.mk)
+$(call inherit-product, device/lge/z-common/z.mk)
 
 ## overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -30,5 +30,5 @@ PRODUCT_COPY_FILES += \
 
 # NFC packages
 PRODUCT_PACKAGES += \
-    nfc_nci.g2 \
+    nfc_nci.z \
     NfcNci
