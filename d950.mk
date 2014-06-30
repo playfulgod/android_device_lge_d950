@@ -23,12 +23,12 @@ PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-PRODUCT_DEVICE := d959
-PRODUCT_NAME := full_d959
+PRODUCT_DEVICE := d950
+PRODUCT_NAME := full_d950
 PRODUCT_BRAND := LGE
-PRODUCT_MODEL := LG-D950
+PRODUCT_MODEL := LG-D959
 PRODUCT_MANUFACTURER := lge
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/lge/d959/device.mk)
+$(call inherit-product, device/lge/d950/device.mk)

@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product-if-exists, vendor/lge/d959/d959-vendor.mk)
+$(call inherit-product-if-exists, vendor/lge/d950/d950-vendor.mk)
 $(call inherit-product, device/lge/z-common/z.mk)
 
 ## overlays
