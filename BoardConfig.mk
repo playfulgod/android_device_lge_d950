@@ -16,7 +16,7 @@
 
 include device/lge/z-common/BoardConfigCommon.mk
 
-TARGET_KERNEL_CONFIG := z-att-perf_defconfig
+TARGET_KERNEL_CONFIG := d950_defconfig
 #TARGET_KERNEL_CONFIG := cyanogenmod_d950_defconfig
 
 G2_DTS_TARGET := msm8974-z-att
