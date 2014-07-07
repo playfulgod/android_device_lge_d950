@@ -16,7 +16,7 @@
 
 include device/lge/z-common/BoardConfigCommon.mk
 
-TARGET_KERNEL_CONFIG := z-tmo-perf_defconfig
+TARGET_KERNEL_CONFIG := d959_defconfig
 #TARGET_KERNEL_CONFIG := cyanogenmod_d959_defconfig
 
 G2_DTS_TARGET := msm8974-z-tmo
