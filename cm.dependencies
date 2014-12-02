@@ -1,14 +1,7 @@
 [
  {
-   "repository": "android_device_lge_z-common",
-   "target_path": "device/lge/z-common"
- },
   "repository": "android_device_qcom_common",
     "target_path": "device/qcom/common"
-  },
- },
-  "repository": "android_device_lge_z-common",
-    "target_path": "device/lge/z-common"
   },
  {
    "repository": "android_kernel_lge_msm8974",
