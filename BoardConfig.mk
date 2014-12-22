@@ -16,8 +16,8 @@
 
 include device/lge/z-common/BoardConfigCommon.mk
 
-TARGET_KERNEL_CONFIG := d950_defconfig
-TARGET_REQUIRES_BUMP := true
+TARGET_KERNEL_CONFIG := d959_defconfig
+#d950_defconfig
 
 G2_DTS_TARGET := msm8974-z-att
 
